@@ -1,0 +1,28 @@
+{
+  "total_marks" : 462,
+  "rank" : 2,
+  "name" : "Ankit",
+  "id" : 777,
+  "status" : "PASS",
+  "subject" : [ {
+    "subject_id" : 8,
+    "subject_name" : "English",
+    "subject_marks" : 94
+  }, {
+    "subject_id" : 6,
+    "subject_name" : "Chemistry",
+    "subject_marks" : 95
+  }, {
+    "subject_id" : 9,
+    "subject_name" : "Maths",
+    "subject_marks" : 100
+  }, {
+    "subject_id" : 10,
+    "subject_name" : "Physics",
+    "subject_marks" : 86
+  }, {
+    "subject_id" : 7,
+    "subject_name" : "German",
+    "subject_marks" : 87
+  } ]
+}

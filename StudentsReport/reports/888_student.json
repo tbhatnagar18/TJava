@@ -1,0 +1,28 @@
+{
+  "total_marks" : 165,
+  "rank" : 3,
+  "name" : "Sakshi",
+  "id" : 888,
+  "status" : "FAIL",
+  "subject" : [ {
+    "subject_id" : 1,
+    "subject_name" : "Maths",
+    "subject_marks" : 33
+  }, {
+    "subject_id" : 2,
+    "subject_name" : "English",
+    "subject_marks" : 33
+  }, {
+    "subject_id" : 3,
+    "subject_name" : "Physics",
+    "subject_marks" : 33
+  }, {
+    "subject_id" : 5,
+    "subject_name" : "German",
+    "subject_marks" : 33
+  }, {
+    "subject_id" : 4,
+    "subject_name" : "Chemistry",
+    "subject_marks" : 33
+  } ]
+}
