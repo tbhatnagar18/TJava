@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import com.tjava.Scanner.Cache.FileCache;
+
 public class CommonUtilities {
 
 	public static final String FINAL_CHAR_REGEX = "[!@#$%^&*()[\\\\]|;',./{}\\\\\\\\:\\\"<>?]";

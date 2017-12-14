@@ -21,9 +21,11 @@ import java.util.concurrent.Executors;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 
+import com.tjava.Scanner.Cache.FileCache;
 import com.tjava.Scanner.FileTypes.CreateDMTD;
 import com.tjava.Scanner.FileTypes.CreateMTD;
 import com.tjava.Scanner.FileTypes.CreateSMTD;
+import com.tjava.Scanner.Utilities.CommonUtilities;
 
 public class CustomerScanner {
 

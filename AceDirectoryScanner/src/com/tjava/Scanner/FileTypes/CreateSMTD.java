@@ -4,12 +4,14 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
+
+import com.tjava.Scanner.Utilities.CommonUtilities;
+import com.tjava.Scanner.Utilities.MapUtil;
 
 public class CreateSMTD implements Runnable {
 

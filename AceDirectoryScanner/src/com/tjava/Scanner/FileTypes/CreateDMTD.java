@@ -3,10 +3,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
+
+import com.tjava.Scanner.Utilities.CommonUtilities;
 
 public class CreateDMTD implements Runnable {
 
