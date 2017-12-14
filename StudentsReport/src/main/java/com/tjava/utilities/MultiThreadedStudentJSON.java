@@ -30,7 +30,10 @@ public class MultiThreadedStudentJSON implements Callable<String> {
 		students.forEach(student -> {
 			Student stu = (Student) student;
 			try {
-				objectMapper.writeValue(new File("reports\\" + stu.getId() + "_student.json"), student);
+				/*objectMapper.writeValue(new File("reports\\" + stu.getId() + "_student.json"), student);*/
+				objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("reports\\" + stu.getId() + "_student.json"),
+						students);
+				
 			} catch (JsonGenerationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

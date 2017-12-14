@@ -2,8 +2,6 @@ package com.tjava.utilities;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -29,13 +27,8 @@ public class StudentUtilities {
 
 	}
 
-	public static void generateJsonReports(MultiThreadedStudentJSON studentJSon, Student students)
+	public static void generateJsonReports(Student students)
 			throws JsonGenerationException, JsonMappingException, IOException {
-
-		/*
-		 * ExecutorService executorService = Executors.newFixedThreadPool(1);
-		 * executorService.submit(studentJSon); executorService.shutdown();
-		 */
 
 		ObjectMapper mapper = new ObjectMapper();
 

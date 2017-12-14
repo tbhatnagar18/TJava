@@ -19,7 +19,6 @@ public class ReportController {
 	@PostMapping("/report")
 	public ModelAndView postReport(@ModelAttribute("student") Student student) {
 
-		System.out.println("inside report controller");
 		ModelAndView view = new ModelAndView("report");
 
 		return view;
@@ -27,7 +26,6 @@ public class ReportController {
 
 	@GetMapping("/report")
 	public ModelAndView getReport(@ModelAttribute("student") Student student) {
-		System.out.println("inside report controller");
 		ModelAndView view = new ModelAndView("report");
 
 		return view;

@@ -15,7 +15,7 @@ public class GeneralUtitlities {
 
 	public static Students marshalDataToModel(MultipartFile file) throws JAXBException {
 
-		File file1 = new File(StudentConstants.UPLOADED_FOLDER + file.getOriginalFilename());
+		File file1 = new File(StudentConstants.RECEIVING_FOLDER + file.getOriginalFilename());
 		JAXBContext jaxbContext = JAXBContext.newInstance(Students.class);
 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		Students students = (Students) jaxbUnmarshaller.unmarshal(file1);

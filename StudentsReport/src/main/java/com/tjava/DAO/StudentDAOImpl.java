@@ -19,11 +19,6 @@ public class StudentDAOImpl implements StudentDAO {
 	@Autowired
 	private StudentRepository studentRepository;
 
-	/*
-	 * public StudentDAOImpl(StudentRepository studentRepository) {
-	 * this.studentRepository = studentRepository; }
-	 */
-
 	@Override
 	public void persistStudents(List<Student> student) {
 
@@ -72,6 +67,7 @@ public class StudentDAOImpl implements StudentDAO {
 			counter++;
 		}
 
+		// setting rank for each student
 		for (Student s1 : getStudentsList()) {
 			s1.setRank(counter);
 			counter--;
