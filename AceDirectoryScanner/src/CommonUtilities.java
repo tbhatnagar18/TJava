@@ -41,10 +41,6 @@ public class CommonUtilities {
 
 		Scanner in = new Scanner(file);
 
-		while (in.hasNext()) {
-			System.out.println(in.nextLine());
-		}
-
 		in = new Scanner(file);
 
 		while (in.hasNext()) {
