@@ -1,4 +1,5 @@
 package com.tjava.Scanner.FileTypes;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -7,6 +8,12 @@ import java.util.concurrent.CountDownLatch;
 
 import com.tjava.Scanner.Utilities.CommonUtilities;
 
+/**
+ * Thread class to create MTD file.
+ * 
+ * @author tbhatn
+ *
+ */
 public class CreateMTD implements Runnable {
 
 	File file;
@@ -32,6 +39,14 @@ public class CreateMTD implements Runnable {
 		}
 	}
 
+	/**
+	 * Create a file and write content to it.
+	 * 
+	 * @param file
+	 * @param metadataArr
+	 * @throws FileNotFoundException
+	 * @throws UnsupportedEncodingException
+	 */
 	private static void createMTD(File file, int[] metadataArr)
 			throws FileNotFoundException, UnsupportedEncodingException {
 

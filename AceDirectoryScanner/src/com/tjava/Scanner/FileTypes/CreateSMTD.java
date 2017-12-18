@@ -1,4 +1,5 @@
 package com.tjava.Scanner.FileTypes;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -12,7 +13,14 @@ import java.util.concurrent.CountDownLatch;
 
 import com.tjava.Scanner.Utilities.CommonUtilities;
 import com.tjava.Scanner.Utilities.MapUtil;
+import com.tjava.Scanner.Utilities.SearchUtility;
 
+/**
+ * Thread class to create SMTD file
+ * 
+ * @author tbhatn
+ *
+ */
 public class CreateSMTD implements Runnable {
 
 	String directory;
@@ -29,7 +37,7 @@ public class CreateSMTD implements Runnable {
 	@Override
 	public void run() {
 
-		List<File> files = CommonUtilities.getAllMTDFiles(directory);
+		List<File> files = SearchUtility.getAllMTDFiles(directory);
 
 		List<String> fileNameList = generateFileListBasedOnCriteria(files);
 
@@ -46,6 +54,13 @@ public class CreateSMTD implements Runnable {
 		}
 	}
 
+	/**
+	 * method to create and write content to smtd files
+	 * @param fileNameList
+	 * @param directory2
+	 * @throws FileNotFoundException
+	 * @throws UnsupportedEncodingException
+	 */
 	private void createAndWriteToSMTDFile(List<String> fileNameList, String directory2)
 			throws FileNotFoundException, UnsupportedEncodingException {
 
@@ -76,8 +91,6 @@ public class CreateSMTD implements Runnable {
 				fileMap.put(file.getAbsolutePath(), value);
 
 			}
-
-			System.out.println("Current File Map: " + fileMap);
 
 			Iterator<String> it = MapUtil.sortByValue(fileMap).keySet().iterator();
 

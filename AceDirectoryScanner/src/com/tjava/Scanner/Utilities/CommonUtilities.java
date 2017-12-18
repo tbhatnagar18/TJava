@@ -1,4 +1,5 @@
 package com.tjava.Scanner.Utilities;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
@@ -13,32 +14,12 @@ public class CommonUtilities {
 
 	public static final String FINAL_CHAR_REGEX = "[!@#$%^&*()[\\\\]|;',./{}\\\\\\\\:\\\"<>?]";
 
-	public static List<File> getAllMTDFiles(String dir) {
-
-		List<File> mtdFile = new ArrayList<File>();
-
-		File directory = new File(dir);
-
-		// get all the files from a directory
-		File[] fList = directory.listFiles();
-
-		for (File file : fList) {
-			if (file.isFile()) {
-				if (file.getAbsolutePath().endsWith(".mtd")) {
-					mtdFile.add(file);
-				}
-			}
-		}
-
-		return mtdFile;
-
-	}
-
 	// count no. of words, alphabets, etc. in a file
 	public static int[] scanFile(File file) throws FileNotFoundException, UnsupportedEncodingException {
 		int words = 0, letters = 0, vowel = 0, specialCharCount = 0;
 
-		// array will contain number of word at position 0, letters at position 1 and so
+		// array will contain number of word at position 0, letters at position
+		// 1 and so
 		// on.
 		int[] metadataArr = new int[4];
 
@@ -132,6 +113,81 @@ public class CommonUtilities {
 		if (timeDiff > seconds) {
 			FileCache.clearFileCache();
 		}
+	}
+
+	/**
+	 * method to calculate and return count of special characters in an MTD
+	 * file.
+	 * 
+	 * @param file
+	 * @return
+	 * @throws FileNotFoundException
+	 */
+	public static int calculateTotalSpecialCharCount(File file) throws FileNotFoundException {
+
+		Scanner in = new Scanner(file);
+		in.nextLine();
+		in.nextLine();
+		in.nextLine();
+		String str = in.nextLine();
+		int index = str.lastIndexOf(": ");
+
+		return Integer.parseInt(str.substring(index + 2));
+
+	}
+
+	/**
+	 * returns total vowels in mtd file
+	 * 
+	 * @param file
+	 * @return
+	 * @return
+	 * @throws FileNotFoundException
+	 */
+	public static int calculateTotalVowel(File file) throws FileNotFoundException {
+		Scanner in = new Scanner(file);
+		in.nextLine();
+		in.nextLine();
+		String str = in.nextLine();
+		int index = str.lastIndexOf(": ");
+
+		return Integer.parseInt(str.substring(index + 2));
+
+	}
+
+	/**
+	 * returns total letters in mtd file
+	 * 
+	 * @param file
+	 * @return
+	 * @return
+	 * @throws FileNotFoundException
+	 */
+	public static int calculateTotalLetters(File file) throws FileNotFoundException {
+		Scanner in = new Scanner(file);
+		in.nextLine();
+		String str = in.nextLine();
+		int index = str.lastIndexOf(": ");
+
+		return Integer.parseInt(str.substring(index + 2));
+
+	}
+
+	/**
+	 * returns total words in mtd file
+	 * 
+	 * @param file
+	 * @return
+	 * @return
+	 * @throws FileNotFoundException
+	 */
+	public static int calculateTotalWords(File file) throws FileNotFoundException {
+		Scanner in = new Scanner(file);
+		String str = in.nextLine();
+		int index = str.lastIndexOf(": ");
+
+		return Integer.parseInt(str.substring(index + 2));
+
 	}
 
 }
