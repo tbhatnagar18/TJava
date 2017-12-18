@@ -65,6 +65,9 @@ public class CommonUtilities {
 
 		// write metadata to .mtd file for each directory and file
 
+		in.close();
+		in = null;
+		file = null;
 		return metadataArr;
 
 	}
