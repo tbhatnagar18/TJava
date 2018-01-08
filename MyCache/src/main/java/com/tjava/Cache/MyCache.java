@@ -71,8 +71,11 @@ public class MyCache<K> {
 	public boolean isPresentInMyCache(K key) {
 
 		if (this.myCacheMap.containsKey(key)) {
-			LocalDateTime localDateTime = this.myCacheMap.get(key).get(1);
-			localDateTime = LocalDateTime.now();
+			synchronized (myCacheMap) {
+				LocalDateTime localDateTime = this.myCacheMap.get(key).get(1);
+				localDateTime = LocalDateTime.now();
+			}
+
 			return true;
 		}
 
