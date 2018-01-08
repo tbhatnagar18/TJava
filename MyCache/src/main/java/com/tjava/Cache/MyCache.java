@@ -67,4 +67,17 @@ public class MyCache<K> {
 		this.myCacheMap.clear();
 	}
 
+	// check if present in cache and reset access timestamp.
+	public boolean isPresentInMyCache(K key) {
+
+		if (this.myCacheMap.containsKey(key)) {
+			LocalDateTime localDateTime = this.myCacheMap.get(key).get(1);
+			localDateTime = LocalDateTime.now();
+			return true;
+		}
+
+		else
+			return false;
+	}
+
 }
